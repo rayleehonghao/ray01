@@ -68,5 +68,5 @@
   <text x="585" y="93" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">净利润</text>
   
   <!-- Chart Title -->
-  <text x="400" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#111827">潮韵雅集平台三年投资回报趋势</text>
+  <text x="400" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#111827">潮汕天街平台三年投资回报趋势</text>
 </svg>
