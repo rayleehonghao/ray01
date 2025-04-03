@@ -1,0 +1,72 @@
+<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="300" rx="8" fill="#FFFFFF"/>
+  
+  <!-- Chart Background -->
+  <rect x="100" y="50" width="600" height="200" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <!-- Axes -->
+  <line x1="100" y1="250" x2="700" y2="250" stroke="#000000" stroke-width="2"/>
+  <line x1="100" y1="50" x2="100" y2="250" stroke="#000000" stroke-width="2"/>
+  
+  <!-- X-Axis Labels -->
+  <text x="175" y="275" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">初始投资期</text>
+  <text x="325" y="275" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">第一年</text>
+  <text x="475" y="275" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">第二年</text>
+  <text x="625" y="275" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">第三年</text>
+  
+  <!-- Y-Axis Labels -->
+  <text x="90" y="250" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">0</text>
+  <text x="90" y="200" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">500</text>
+  <text x="90" y="150" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">1000</text>
+  <text x="90" y="100" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">1500</text>
+  <text x="90" y="50" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">2000</text>
+  
+  <!-- Grid Lines -->
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="100" y1="150" x2="700" y2="150" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="100" y1="100" x2="700" y2="100" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="100" y1="50" x2="700" y2="50" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  
+  <line x1="175" y1="50" x2="175" y2="250" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="325" y1="50" x2="325" y2="250" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="475" y1="50" x2="475" y2="250" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="625" y1="50" x2="625" y2="250" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  
+  <!-- Data Points - Income -->
+  <circle cx="175" cy="250" r="5" fill="#10B981"/>
+  <circle cx="325" cy="218" r="5" fill="#10B981"/>
+  <circle cx="475" cy="118" r="5" fill="#10B981"/>
+  <circle cx="625" cy="70" r="5" fill="#10B981"/>
+  
+  <!-- Data Points - Expense -->
+  <circle cx="175" cy="176" r="5" fill="#EF4444"/>
+  <circle cx="325" cy="126" r="5" fill="#EF4444"/>
+  <circle cx="475" cy="98" r="5" fill="#EF4444"/>
+  <circle cx="625" cy="84" r="5" fill="#EF4444"/>
+  
+  <!-- Data Points - Profit/Loss -->
+  <circle cx="175" cy="310" r="5" fill="#6366F1"/>
+  <circle cx="325" cy="310" r="5" fill="#6366F1"/>
+  <circle cx="475" cy="138" r="5" fill="#6366F1"/>
+  <circle cx="625" cy="92" r="5" fill="#6366F1"/>
+  
+  <!-- Line Graphs -->
+  <polyline points="175,250 325,218 475,118 625,70" stroke="#10B981" stroke-width="2" fill="none"/>
+  <polyline points="175,176 325,126 475,98 625,84" stroke="#EF4444" stroke-width="2" fill="none"/>
+  <polyline points="175,310 325,310 475,138 625,92" stroke="#6366F1" stroke-width="2" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="550" y="30" width="140" height="80" rx="4" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <circle cx="570" cy="50" r="5" fill="#10B981"/>
+  <text x="585" y="53" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">收入</text>
+  
+  <circle cx="570" cy="70" r="5" fill="#EF4444"/>
+  <text x="585" y="73" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">成本</text>
+  
+  <circle cx="570" cy="90" r="5" fill="#6366F1"/>
+  <text x="585" y="93" font-family="Inter, sans-serif" font-size="12" fill="#4B5563">净利润</text>
+  
+  <!-- Chart Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#111827">潮韵雅集平台三年投资回报趋势</text>
+</svg>

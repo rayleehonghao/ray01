@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta name="googlebot" content="noindex, nofollow"/>
+    <title>潮汕天街项目 - JSRUN 驱动</title>
+
+    <script type="text/javascript" src="" ></script>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+
+</head>
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>潮汕天街 - 潮汕文化数字生态平台商业计划书</title>
+	<script src="https://cdn.tailwindcss.com">
+	</script>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.160.0/dist/umd/lucide.min.js">
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+	<script>
+		window.addEventListener("wheel", (e)=> {
+            const isPinching = e.ctrlKey
+            if(isPinching) e.preventDefault()
+        }, { passive: false })
+	</script>
+
+	<!-- Header -->
+	<header class="border-b border-gray-200 px-6 py-4 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
+		<div class="max-w-6xl mx-auto flex justify-between items-center">
+			<div class="flex items-center">
+				<img src="images/logo.svg" alt="潮汕天街 Logo" class="h-10 mr-3">
+                <h1 class="text-xl font-semibold">潮汕天街</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#overview" class="text-gray-800 hover:text-black">概览</a>
+                <a href="#market" class="text-gray-800 hover:text-black">市场分析</a>
+                <a href="#platform" class="text-gray-800 hover:text-black">平台设计</a>
+                <a href="#model" class="text-gray-800 hover:text-black">商业模式</a>
+                <a href="#timeline" class="text-gray-800 hover:text-black">实施路径</a>
+                <a href="#roi" class="text-gray-800 hover:text-black">投资回报</a>
+            </nav>
+            <button id="menuToggle" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end p-6">
+            <button id="closeMenu" class="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center space-y-6 mt-10 text-lg">
+            <a href="#overview" class="w-full text-center py-3 hover:bg-gray-100">概览</a>
+            <a href="#market" class="w-full text-center py-3 hover:bg-gray-100">市场分析</a>
+            <a href="#platform" class="w-full text-center py-3 hover:bg-gray-100">平台设计</a>
+            <a href="#model" class="w-full text-center py-3 hover:bg-gray-100">商业模式</a>
+            <a href="#timeline" class="w-full text-center py-3 hover:bg-gray-100">实施路径</a>
+            <a href="#roi" class="w-full text-center py-3 hover:bg-gray-100">投资回报</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">潮汕天街</h1>
+                <h2 class="text-2xl md:text-3xl text-gray-700 mb-6 leading-snug">潮汕文化数字生态平台</h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    通过文化传播、线上社交与沉浸式购物，推广潮汕文化，吸纳优质商源，增加地方税收，促进跨区域文化与经济互通的创新平台。
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#platform" class="px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition">了解平台</a>
+                    <a href="#roi" class="px-6 py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition">投资回报</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="images/hero.svg" alt="潮汕文化数字平台" class="w-full max-w-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">项目概览</h2>
+            <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <div class="flex flex-col md:flex-row gap-10">
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl font-semibold mb-4">项目背景</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            潮汕地区拥有深厚的文化底蕴和广泛的侨乡网络，但传统文化面临传承困境，传统工艺缺乏现代商业渠道，地方特色产业数字化程度不高。本项目旨在通过数字平台建设，创新潮汕文化的传播与变现方式。
+                        </p>
+                        <h3 class="text-xl font-semibold mb-4">项目定位</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            「潮汕天街」是中国首个集潮汕文化传播、社交互动与沉浸式购物体验于一体的数字生态平台，以微信小程序为载体，连接全球潮汕人群与文化爱好者，实现文化传承与商业价值的双赢。
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl font-semibold mb-4">核心价值主张</h3>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="mt-1 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">文化赋能消费</h4>
+                                    <p class="text-gray-600">每一次购物都是一次文化体验，每件商品都承载文化故事和身份认同</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mt-1 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">社交连接情感</h4>
+                                    <p class="text-gray-600">基于共同文化认同构建社交网络，连接全球潮汕人及文化爱好者</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mt-1 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">数字保存传统</h4>
+                                    <p class="text-gray-600">运用数字技术记录和展示非物质文化遗产，促进创新表达</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="mt-1 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">经济赋能传承</h4>
+                                    <p class="text-gray-600">为传统工艺传承人提供直联消费者的数字渠道，实现双赢</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Analysis Section -->
+    <section id="market" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">市场分析</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Target Users -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target mr-3"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        目标用户
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">本地潮汕人群</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>年龄分布：18-55岁，具有消费能力</li>
+                                <li>需求：寻找传统文化产品、参与文化活动</li>
+                                <li>特点：文化认同感强，对传统工艺品亲近</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">海外潮汕籍华人</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>规模：全球约1500万潮汕籍华侨华人</li>
+                                <li>需求：寻根认祖、文化连接、购买家乡特产</li>
+                                <li>特点：情感联系强烈，购买力高</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">文化爱好者与游客</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>年龄：25-45岁，文化消费意愿高</li>
+                                <li>来源：受短视频平台传播潮汕文化影响</li>
+                                <li>需求：深度文化体验、获取正宗文化产品</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Target Merchants -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store mr-3"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2 2 0 0 1-2-2v0"/><path d="M18 12v0a2 2 0 0 1-2-2v0"/><path d="M14 12v0a2 2 0 0 1-2-2v0"/><path d="M10 12v0a2 2 0 0 1-2-2v0"/><path d="M6 12v0a2 2 0 0 1-2-2v0"/><path d="M2 7v3a2 2 0 0 0 2 2v0"/></svg>
+                        目标商家
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">非遗传承人与传统工艺商家</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>类型：潮瓷、潮绣、潮雕、工夫茶、麦秆贴画等匠人</li>
+                                <li>痛点：数字化能力不足、营销渠道有限</li>
+                                <li>需求：品牌塑造、技艺展示、客户直连</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">文创产品开发者</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>类型：结合潮汕元素的现代设计产品商家</li>
+                                <li>需求：文化资源授权、品牌曝光、消费者直达</li>
+                                <li>特点：创新能力强，但缺乏文化深度</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">地方特色商品经营者</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>类型：潮汕美食、特产、手工艺品等</li>
+                                <li>需求：品牌塑造、产品溯源、社交电商能力</li>
+                                <li>痛点：传统销售渠道受限，缺乏品牌影响力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3 mr-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                    市场机会
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border border-gray-100 rounded-lg p-5">
+                        <h4 class="font-medium text-lg mb-3">文化消费升级</h4>
+                        <p class="text-gray-700">随着消费升级，中国文化自信提升，消费者对具有文化内涵的产品和体验需求激增，尤其是具有地域特色的传统文化产品市场潜力巨大。</p>
+                    </div>
+                    <div class="border border-gray-100 rounded-lg p-5">
+                        <h4 class="font-medium text-lg mb-3">华侨经济网络</h4>
+                        <p class="text-gray-700">潮汕地区拥有庞大的海外华侨网络，这一群体对家乡文化有天然亲近感，具有较高消费能力和跨境消费需求，是重要的目标市场。</p>
+                    </div>
+                    <div class="border border-gray-100 rounded-lg p-5">
+                        <h4 class="font-medium text-lg mb-3">数字化转型需求</h4>
+                        <p class="text-gray-700">传统工艺产业亟需数字化转型，提升品牌价值和市场覆盖。政府政策支持文化产业与数字技术融合，为项目提供了良好政策环境。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Design Section -->
+    <section id="platform" class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">平台设计</h2>
+
+            <div class="space-y-10">
+                <!-- Cultural Content Module -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-library mr-3"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg>
+                        文化内容呈现
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="font-medium text-lg mb-3">「潮汕时光」数字博物馆</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li><span class="font-medium">沉浸展览区：</span>3D全景技术呈现潮汕历史空间与文物</li>
+                                <li><span class="font-medium">非遗数字图谱：</span>系统性展示潮汕非遗，包括高清视频、音频讲解</li>
+                                <li><span class="font-medium">匠人故事库：</span>记录传承人口述历史、技艺传承脉络</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-lg mb-3">「潮学堂」文化学习区</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li><span class="font-medium">潮汕话学习：</span>日常用语、方言歌谣、互动练习</li>
+                                <li><span class="font-medium">工艺教学：</span>陶瓷、刺绣、木雕等传统工艺视频教程</li>
+                                <li><span class="font-medium">文化课程：</span>历史、民俗、美食等系统性学习内容</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">「潮汕元宇宙」数字文化空间</h4>
+                        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                            <li>数字化重建的潮汕标志性建筑和场景</li>
+                            <li>用户可创建潮汕风格化身，体验传统活动</li>
+                            <li>季节性文化节庆活动的虚拟再现</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <img src="images/cultural-content.svg" alt="文化内容展示" class="w-full mt-4 rounded-lg">
+                    </div>
+                </div>
+                
+                <!-- Social Interaction Module -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square mr-3"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        社交互动机制
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-medium text-lg mb-3">「潮人圈」社区互动</h4>
+                                <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                    <li>兴趣小组：按文化领域分组（潮剧、工艺、美食等）</li>
+                                    <li>内容创作：用户分享潮汕相关的文章、视频、图片</li>
+                                    <li>活动日历：线上线下文化活动分享与预约</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-lg mb-3">「非遗直播间」互动体验</h4>
+                                <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                    <li>大师教学：非遗传承人技艺展示与教学</li>
+                                    <li>文化讲座：邀请专家进行潮汕文化主题分享</li>
+                                    <li>互动连线：用户可与匠人直接对话交流</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-medium text-lg mb-3">「潮汕亲友圈」关系网络</h4>
+                                <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                    <li>地域身份认证：验证潮汕籍身份，建立地域关系网</li>
+                                    <li>家族文化记忆：家族历史和文化记忆的私密分享</li>
+                                    <li>华侨连接：面向海外潮汕籍华人的专属交流平台</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-lg mb-3">社交裂变机制</h4>
+                                <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                    <li>文化挑战：如"潮汕话挑战"等社交媒体互动活动</li>
+                                    <li>送礼功能：特色文化礼品线上赠送与文化祝福</li>
+                                    <li>共创活动：多人协作完成潮汕主题数字艺术创作</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shopping Experience Module -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag mr-3"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        沉浸式购物体验
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-medium text-lg mb-3">「非遗集市」文化商城</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li><span class="font-medium">文化解读商品：</span>每件商品附带文化故事和制作工艺</li>
+                                <li><span class="font-medium">AR体验：</span>AR技术支持"试用"潮汕工艺品摆放效果</li>
+                                <li><span class="font-medium">定制服务：</span>提供个性化定制工艺品、文创产品服务</li>
+                            </ul>
+                            
+                            <h4 class="font-medium text-lg mt-6 mb-3">「潮汕好物」主题购物区</h4>
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50 font-geist-mono">
+                                <div class="border-b border-gray-300 pb-2 mb-2 text-center">潮汕好物推荐</div>
+                                <div class="grid grid-cols-3 gap-2 mb-2">
+                                    <div class="text-center">
+                                        <div class="font-medium">工艺美术</div>
+                                        <div class="text-sm">• 陶瓷</div>
+                                        <div class="text-sm">• 木雕</div>
+                                        <div class="text-sm">• 刺绣</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="font-medium">地方特产</div>
+                                        <div class="text-sm">• 食品</div>
+                                        <div class="text-sm">• 茶叶</div>
+                                        <div class="text-sm">• 调味品</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="font-medium">文创产品</div>
+                                        <div class="text-sm">• 服饰</div>
+                                        <div class="text-sm">• 家居</div>
+                                        <div class="text-sm">• 文具</div>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-300 pt-2 text-center">匠人推荐 | 限时特惠</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-lg mb-3">「文化体验」服务市场</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li>旅游路线定制与预订</li>
+                                <li>工艺体验课程报名</li>
+                                <li>文化活动门票销售</li>
+                                <li>传统工艺深度游预约</li>
+                            </ul>
+                            
+                            <h4 class="font-medium text-lg mt-6 mb-3">「潮汕礼物」文化礼品服务</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li>潮汕特色文化礼品定制</li>
+                                <li>传统节庆礼品推荐</li>
+                                <li>跨境礼品寄送服务（面向海外华人）</li>
+                                <li>文化意义解读与祝福定制</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Section -->
+    <section id="model" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">商业模式</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Revenue Streams -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100 lg:col-span-2">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bank mr-3"><rect x="2" y="11" width="20" height="8" rx="2"/><path d="M12 4v7"/><path d="m2 11 10-7 10 7"/><path d="M19 22V11"/><path d="M5 22V11"/></svg>
+                        核心盈利模式
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-lg mb-3">交易抽成</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li><span class="font-medium">商品交易佣金：</span>普通商品5-10%阶梯式佣金，文化IP授权产品15-20%，非遗传承人作品低佣金（3-5%）</li>
+                                <li><span class="font-medium">服务预订佣金：</span>文化体验活动8-12%，旅游服务10-15%，线下课程8-10%</li>
+                            </ul>
+                            
+                            <h4 class="font-medium text-lg mt-6 mb-3">商家服务费</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li><span class="font-medium">商家入驻分级：</span>基础商户（免费），认证商户（1000-3000元/年），品牌商户（5000-10000元/年）</li>
+                                <li><span class="font-medium">增值服务：</span>商品摄影与内容制作，数据分析与营销指导，直播间技术支持</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-lg mb-3">用户增值服务</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li><span class="font-medium">会员服务：</span>普通会员（免费），文化会员（88元/年），尊享会员（365元/年）</li>
+                                <li><span class="font-medium">定制服务：</span>文化礼品定制，私人文化导师，家族文化记忆定制</li>
+                            </ul>
+                            
+                            <h4 class="font-medium text-lg mt-6 mb-3">广告与流量变现</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li>文化内容中的原生广告推广</li>
+                                <li>商品推荐位展示与首页轮播广告位</li>
+                                <li>接入小程序流量主获取广告收益</li>
+                            </ul>
+                            
+                            <h4 class="font-medium text-lg mt-6 mb-3">文化IP授权</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                                <li>数字文化资源包授权（面向教育机构）</li>
+                                <li>潮汕文化元素商业授权（面向品牌与设计师）</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <img src="images/business-model.svg" alt="商业模式图" class="w-full">
+                    </div>
+                </div>
+                
+                <!-- Platform Altruism -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake mr-3"><path d="M19 6 9 6C7.343 6 6 7.343 6 9v0a3 3 0 0 0 3 3h1"/><path d="m13 16-4-4"/><path d="M19 9c-.667 1-2.4 3-4 3"/><path d="M19 12v3a2 2 0 0 1-2 2h-1.5"/><path d="M10 16v3a2 2 0 0 0 2 2v0"/><path d="M2 17a5 5 0 0 0 5-5"/><path d="M7 7a5 5 0 0 1 5 5"/><path d="M17 17a5 5 0 0 1-5-5"/><path d="m21 10 1-1a2.116 2.116 0 0 0 0-2.965 2.116 2.116 0 0 0-2.965 0L17 7"/></svg>
+                        平台利他性设计
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">对传承人的利他性</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>直连消费者，减少中间环节，提高收益率</li>
+                                <li>提供数字化转型支持，扩大市场覆盖</li>
+                                <li>技艺数字化记录，减少失传风险</li>
+                                <li>线上"师徒配对"，解决传承人才断层问题</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">对消费者的利他性</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>通过消费获得文化知识和体验</li>
+                                <li>溯源系统确保产品真实性和质量</li>
+                                <li>直连源头，减少中间环节可能的质量问题</li>
+                                <li>基于文化兴趣建立社交连接，强化认同感</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-lg mb-2">对社会的利他性</h4>
+                            <ul class="text-gray-700 list-disc pl-5 space-y-1">
+                                <li>数字化保存非物质文化遗产</li>
+                                <li>创新传播方式，扩大文化影响力</li>
+                                <li>带动传统工艺产业发展</li>
+                                <li>促进文旅融合和地方经济</li>
+                                <li>平台收入用于文化保护公益项目</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Government Goals -->
+            <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building mr-3"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                    促进设定目标策略
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">吸引投资策略</h4>
+                        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                            <li>建立完整数据监测体系，发布"潮汕文化数字经济指数"</li>
+                            <li>挖掘包装成功商家案例，展示平台商业价值</li>
+                            <li>举办"潮汕文化数字经济投资论坛"，邀请投资机构参与</li>
+                            <li>与产业基金、文化金融机构建立合作机制</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">增加税收策略</h4>
+                        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                            <li>建立多元化收入结构，通过佣金、会员费等创造税收</li>
+                            <li>推动线上交易向规范化、标准化方向发展</li>
+                            <li>建立商家成长体系，帮助小微商家实现规模化经营</li>
+                            <li>推动传统手工艺企业化、规模化发展</li>
+                            <li>建立完善的交易记录和财务管理系统</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">文化经济交流策略</h4>
+                        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                            <li>建立"潮汕文化国际交流中心"线上板块</li>
+                            <li>推出多语言版本，面向海外华人和国际用户</li>
+                            <li>建立"潮汕文化商品出海通道"，帮助优质文创产品进入国际市场</li>
+                            <li>开发"文化体验旅行"定制服务</li>
+                            <li>参与"一带一路"文化交流活动</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Timeline Section -->
+    <section id="timeline" class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">实施路径</h2>
+            
+            <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <div class="mb-8">
+                    <img src="images/timeline.svg" alt="实施时间线" class="w-full">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1</div>
+                            <h3 class="text-xl font-semibold">内容建设与商家孵化</h3>
+                        </div>
+                        <p class="text-gray-600 mb-3">3-6个月</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>开发基础小程序框架，包含内容展示和电商系统</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>招募核心非遗传承人和商家入驻</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>开展潮汕文化数字化记录项目</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>建立初步用户体系和内容创作团队</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">2</div>
+                            <h3 class="text-xl font-semibold">社交生态构建</h3>
+                        </div>
+                        <p class="text-gray-600 mb-3">6-12个月</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>上线社区互动、直播等社交功能</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>开展品牌营销活动，吸引用户增长</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>优化商品和服务体系，丰富平台内容</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>建设潮汕元宇宙基础虚拟场景</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-black text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3</div>
+                            <h3 class="text-xl font-semibold">生态扩展与国际化</h3>
+                        </div>
+                        <p class="text-gray-600 mb-3">1-2年</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>开发多语言版本，面向海外潮汕华人</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>建立完整的潮汕文化IP体系</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>推出高级沉浸式体验功能</span>
+                            </li>
+                            <li class="flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mr-2 mt-1 flex-shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span>拓展线下实体合作空间</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Analysis Section -->
+    <section id="roi" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">投资回报分析</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Initial Investment -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet mr-3"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+                        初始投资估算
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-800 font-semibold border-b">投资类别</th>
+                                    <th class="py-3 px-4 bg-gray-100 text-right text-gray-800 font-semibold border-b">金额(万元)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">技术开发</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">135</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">内容制作</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">60</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">团队组建</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">69</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">市场推广</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">55</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">法律和行政</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">15</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 border-b border-gray-200">缓冲资金</td>
+                                    <td class="py-3 px-4 border-b border-gray-200 text-right">33.4</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-semibold">总计</td>
+                                    <td class="py-3 px-4 text-right font-semibold">367.4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Revenue Projection -->
+                <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up mr-3"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        收入预测
+                    </h3>
+                    
+                    <h4 class="font-medium text-lg mb-3">第一年收入结构：</h4>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-800 font-semibold border-b">收入类别</th>
+                                    <th class="py-3 px-4 bg-gray-100 text-right text-gray-800 font-semibold border-b">金额(万元)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">交易佣金</td>
+                                    <td class="py-2 px-4 border-b border-gray-200 text-right">80</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">商家服务</td>
+                                    <td class="py-2 px-4 border-b border-gray-200 text-right">50</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">用户增值服务</td>
+                                    <td class="py-2 px-4 border-b border-gray-200 text-right">95</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">广告与流量</td>
+                                    <td class="py-2 px-4 border-b border-gray-200 text-right">55</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">IP授权</td>
+                                    <td class="py-2 px-4 border-b border-gray-200 text-right">45</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 font-semibold">总计</td>
+                                    <td class="py-2 px-4 text-right font-semibold">325</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4 class="font-medium text-lg mb-3">第二年收入预测：</h4>
+                    <ul class="text-gray-700 list-disc pl-5 space-y-2 mb-6">
+                        <li>随着用户规模达到50万，GMV提升至5000万</li>
+                        <li>总收入预计达到<span class="font-semibold">1575万元</span>，同比增长385%</li>
+                        <li>收入占比最高的为用户增值服务(35%)和交易佣金(27%)</li>
+                    </ul>
+                    
+                    <img src="images/roi-chart.svg" alt="ROI趋势图" class="w-full mt-4">
+                </div>
+            </div>
+            
+            <!-- Cash Flow and ROI -->
+            <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calculator mr-3"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                    投资回报分析
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">现金流预测</h4>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-3 px-4 bg-gray-100 text-left text-gray-800 font-semibold border-b">项目</th>
+                                        <th class="py-3 px-4 bg-gray-100 text-right text-gray-800 font-semibold border-b">初始投资期</th>
+                                        <th class="py-3 px-4 bg-gray-100 text-right text-gray-800 font-semibold border-b">第一年</th>
+                                        <th class="py-3 px-4 bg-gray-100 text-right text-gray-800 font-semibold border-b">第二年</th>
+                                        <th class="py-3 px-4 bg-gray-100 text-right text-gray-800 font-semibold border-b">第三年</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200">收入</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">0</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">325</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">1,575</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">2,362.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200">成本</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">367.4</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">734.8</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">1,012.8</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">1,316.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-gray-200">净现金流</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">-367.4</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">-409.8</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">562.2</td>
+                                        <td class="py-2 px-4 border-b border-gray-200 text-right">1,045.9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 font-semibold">累计现金流</td>
+                                        <td class="py-2 px-4 text-right font-semibold">-367.4</td>
+                                        <td class="py-2 px-4 text-right font-semibold">-777.2</td>
+                                        <td class="py-2 px-4 text-right font-semibold">-215.0</td>
+                                        <td class="py-2 px-4 text-right font-semibold text-green-600">830.9</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">ROI分析</h4>
+                        <ul class="text-gray-700 space-y-4">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-milestone mr-3 mt-0.5 flex-shrink-0"><path d="M18 6H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h13l4-4-4-3z"/><path d="M12 13v8"/><path d="M12 3v3"/></svg>
+                                <div>
+                                    <span class="font-medium">投资回收期：</span>约2.5年
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent mr-3 mt-0.5 flex-shrink-0"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+                                <div>
+                                    <span class="font-medium">三年ROI：</span>约24.2%（基于三年净收益830.86万元与总投入3431.64万元）
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-balance-scale mr-3 mt-0.5 flex-shrink-0"><path d="m20.43 19-4-8H15l-4 8"/><path d="m7.57 19 4-8H13l.43 1"/><path d="M18 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2Z"/><path d="M12 22V2"/><path d="M12 14v1"/></svg>
+                                <div>
+                                    <span class="font-medium">盈亏平衡点：</span>预计第二年第四季度实现单月盈亏平衡
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="font-medium text-lg mt-6 mb-3">利润率趋势</h4>
+                        <div class="font-geist-mono bg-gray-50 rounded-lg p-4 border border-gray-200">
+                            <div class="text-gray-700">利润率趋势:</div>
+                            <div class="text-red-500 mt-2">第一年: -126.1%</div>
+                            <div class="text-green-600 mt-1">第二年: 35.7%</div>
+                            <div class="text-green-600 mt-1">第三年: 44.3%</div>
+                        </div>
+                        
+                        <h4 class="font-medium text-lg mt-6 mb-3">投资建议</h4>
+                        <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                            <li>首期投入约400万元，覆盖初始投资和部分运营成本</li>
+                            <li>根据第一年KPI达成情况，决定第二轮融资规模</li>
+                            <li>内容生产建立分层机制，优先投入高转化内容</li>
+                            <li>营销费用与实际ROI挂钩，确保投入产出比</li>
+                            <li>探索跨境电商机会，针对海外潮汕华人市场</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+                    <h4 class="font-medium text-lg mb-2">结论</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        「潮汕天街」平台在经历了第一年的投入期后，预计第二年起将实现显著增长和盈利能力。项目三年ROI预计达到24.2%，投资回收期约2.5年，符合文化科技创新项目的回报预期。该项目不仅具备商业可持续性，还能在潮汕文化传承和非遗保护方面发挥重要社会价值，具有较强的投资吸引力。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="py-16 px-6 bg-black text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">携手共建潮汕文化数字生态</h2>
+            <p class="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                「潮汕天街」不仅是一个商业项目，更是一次文化使命。我们诚邀各界人士参与这一具有深远意义的平台建设，共同推动潮汕文化的数字化传承与创新发展。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#" class="px-6 py-3 bg-white text-black rounded-md hover:bg-gray-100 transition">申请项目合作</a>
+                <a href="#" class="px-6 py-3 border border-white rounded-md hover:bg-white/10 transition">联系我们</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="images/logo.svg" alt="潮汕天街 Logo" class="h-10 mr-3">
+                    <h3 class="text-xl font-semibold">潮汕天街</h3>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="ray1019@163.com" class="text-gray-600 hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wechat"><path d="M15.5 22.2h-7.4l-.3-7.3h7.8l-.1 7.3z"/><path d="M17.5 6.2V2.4a2.4 2.4 0 0 0-2.4-2.4H8.9a2.4 2.4 0 0 0-2.4 2.4v3.8"/><path d="M8.9 14.8 7.5 22l3.4-2 3.7 2-1.5-7.2"/><path d="M19.5 13.5h-15a4.5 4.5 0 0 1-4.5-4.5 4.5 4.5 0 0 1 4.5-4.5h15a4.5 4.5 0 0 1 4.5 4.5 4.5 4.5 0 0 1-4.5 4.5z"/></svg>
+                    </a>
+                    <a href="13682595500" class="text-gray-600 hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between">
+                <div class="text-gray-600 mb-4 md:mb-0">
+                    &copy; 2025 潮汕天街. 保留所有权利
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script type="application/javascript" src="main.js"></script>
+</html>
+

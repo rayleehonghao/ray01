@@ -1,0 +1,43 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" rx="8" fill="#FFFFFF"/>
+  <rect x="100" y="50" width="600" height="300" rx="8" fill="#F8F9FA" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="400" y="90" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#111827">潮韵雅集收入来源构成</text>
+  
+  <!-- Revenue Streams -->
+  <rect x="150" y="120" width="160" height="100" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="230" y="145" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#111827">交易佣金</text>
+  <text x="230" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 商品佣金</text>
+  <text x="230" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 服务佣金</text>
+  
+  <rect x="320" y="120" width="160" height="100" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="400" y="145" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#111827">商家服务</text>
+  <text x="400" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 入驻费</text>
+  <text x="400" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 增值服务</text>
+  
+  <rect x="490" y="120" width="160" height="100" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="570" y="145" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#111827">用户增值服务</text>
+  <text x="570" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 会员费</text>
+  <text x="570" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 定制服务</text>
+  
+  <rect x="150" y="230" width="245" height="100" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="272.5" y="255" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#111827">广告与流量</text>
+  <text x="272.5" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 原生广告</text>
+  <text x="272.5" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 小程序流量主</text>
+  
+  <rect x="405" y="230" width="245" height="100" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  <text x="527.5" y="255" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#111827">IP授权</text>
+  <text x="527.5" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 文化资源授权</text>
+  <text x="527.5" y="310" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#374151">• 商业授权与数字藏品</text>
+  
+  <!-- Connecting lines -->
+  <line x1="400" y1="100" x2="400" y2="110" stroke="#000000" stroke-width="1"/>
+  <line x1="200" y1="110" x2="600" y2="110" stroke="#000000" stroke-width="1"/>
+  <line x1="200" y1="110" x2="200" y2="120" stroke="#000000" stroke-width="1"/>
+  <line x1="400" y1="110" x2="400" y2="120" stroke="#000000" stroke-width="1"/>
+  <line x1="600" y1="110" x2="600" y2="120" stroke="#000000" stroke-width="1"/>
+  
+  <line x1="275" y1="220" x2="275" y2="230" stroke="#000000" stroke-width="1"/>
+  <line x1="525" y1="220" x2="525" y2="230" stroke="#000000" stroke-width="1"/>
+  <line x1="275" y1="220" x2="525" y2="220" stroke="#000000" stroke-width="1"/>
+  <line x1="400" y1="200" x2="400" y2="220" stroke="#000000" stroke-width="1"/>
+</svg>
